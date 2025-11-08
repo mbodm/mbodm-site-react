@@ -45,7 +45,7 @@ function getNavContent(location, lang) {
     return (
       <>
         <img src={homeIcon} alt="home-icon" />
-        <Link to="/">{lang.entries.home}</Link>
+        <Link to="/">{lang.entries.homeLabel}</Link>
       </>
     );
   }
@@ -53,8 +53,8 @@ function getNavContent(location, lang) {
     <>
       <img src={appsIcon} alt="apps-icon" />
       <a href="https://github.com/mbodm">GitHub</a>
-      <Link to="/contact">{lang.entries.contact}</Link>
-      <Link to="/about">{lang.entries.about}</Link>
+      <Link to="/contact">{lang.entries.contactLabel}</Link>
+      <Link to="/about">{lang.entries.aboutLabel}</Link>
     </>
   );
 }
@@ -65,5 +65,5 @@ function getFooterContent(location, lang) {
     return null;
   }
   // In JSX a single HTML line needs no JSX fragment wrapper (<>)
-  return <span>{lang.entries.footer}</span>;
+  return <span>{lang.entries.footerMessage}</span>;
 }
