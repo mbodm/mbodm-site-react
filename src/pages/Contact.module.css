@@ -1,0 +1,13 @@
+.container {
+    height: 100%;
+    /* fill layout main container */
+    display: flex;
+    /* is's a flexbox container which centers its own content horizontally and vertically */
+    justify-content: center;
+    align-items: center;
+}
+
+.container a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
