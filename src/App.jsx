@@ -13,7 +13,7 @@ export default function App() {
   const lang = useLang();
   return (
     <>
-      <div className="layout debug">
+      <div className="layout">
         <header>
           <nav>
             {getNavContent(location, lang)}
