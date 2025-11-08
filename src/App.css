@@ -1,0 +1,109 @@
+.layout {
+    /* reason for next line -> fill app container */
+    height: 100%;
+    /* reason for next 2 lines -> content from "top to bottom" -> header - main (remaining space) - footer */
+    display: flex;
+    flex-direction: column;
+    background-color: var(--secondary-color);
+}
+
+header {
+    /* reason for next 3 lines -> content from "left to right" -> nav - remaining space - aside */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: small;
+}
+
+main {
+    /* reason for next line -> fill remaining space inside layout container ("top to bottom") */
+    flex: 1;
+}
+
+footer {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: small;
+    color: var(--separator-color);
+}
+
+header>nav,
+header>aside {
+    padding: 10px;
+}
+
+header>nav>img,
+header>aside>img {
+    margin-right: 10px;
+    /* reason for next line -> baseline differs for <img> and <a> and <button> */
+    vertical-align: middle;
+}
+
+header>nav>a,
+header>aside>button {
+    color: var(--primary-color);
+    /* reason for next line -> baseline differs for <img> and <a> and <button> */
+    vertical-align: middle;
+}
+
+header>nav>a {
+    text-decoration: none;
+}
+
+header>aside>button {
+    /* reason for next 5 lines -> reset default button style */
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    font: inherit;
+    /* reason for next line -> apply the <a> cursor style to <button> */
+    cursor: pointer;
+}
+
+header>nav>a+a,
+header>aside>button+button {
+    /* reason for this code block -> create separator (but only between of 2 header elements) */
+    border-left: 2px solid var(--separator-color);
+    margin-left: 10px;
+    padding-left: 10px;
+}
+
+/* debug colors */
+
+.layout.debug {
+    background-color: lightcoral;
+}
+
+.layout.debug header {
+    background-color: lightgreen;
+}
+
+.layout.debug main {
+    background-color: lightblue;
+}
+
+.layout.debug footer {
+    background-color: lightyellow;
+}
+
+.layout.debug header>nav,
+.layout.debug header>aside {
+    background-color: red;
+}
+
+.layout.debug header>nav>img,
+.layout.debug header>aside>img {
+    background-color: green;
+}
+
+.layout.debug header>nav>a,
+.layout.debug header>aside>button {
+    background-color: blue;
+}
+
+.layout.debug header>nav>a+a,
+.layout.debug header>aside>button+button {
+    border-left: 2px solid yellow;
+}

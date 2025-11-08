@@ -1,0 +1,32 @@
+:root {
+    --primary-color: steelblue;
+    --secondary-color: white;
+    /* Next code line is advised by Google to use with "md-dark" Material Icon Font, */
+    /* when used with some light/white background. The SVG icons use same color too. */
+    --separator-color: rgba(0, 0, 0, 0.54);
+}
+
+* {
+    /* Reset */
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    /* Next code line is used to counter the "100vh problem" on mobile browsers, */
+    /* since there the viewport is less than 100vh and creates scrolling issues. */
+    /* See https://stackoverflow.com/questions/37112218/css3-100vh-not-constant-in-mobile-browser */
+    height: 100%;
+}
+
+body {
+    width: 100vw;
+    /* Next code line is used to counter the "100vh problem" on mobile browsers, */
+    /* since there the viewport is less than 100vh and creates scrolling issues. */
+    /* Using 100% now, instead of 100vh, in combination with above html setting. */
+    /* See https://stackoverflow.com/questions/37112218/css3-100vh-not-constant-in-mobile-browser */
+    height: 100%;
+    /* Next code line is used to respect some eventually existing vertical scrollbar. */
+    max-width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
